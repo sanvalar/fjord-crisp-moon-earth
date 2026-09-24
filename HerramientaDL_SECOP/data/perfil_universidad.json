@@ -1,0 +1,132 @@
+{
+  "institucion": {
+    "nombre": "Universidad de San Buenaventura Medellín",
+    "sede": "Medellín y Bello (Campus San Benito y Campus Universitario de Bello)",
+    "tipo": "Institución de Educación Superior (IES)",
+    "acreditacion": "Acreditación Institucional de Alta Calidad (Ministerio de Educación Nacional)",
+    "descripcion": "Institución de Educación Superior franciscana con destacada trayectoria en ingeniería, ciencia de datos, desarrollo de software, modelamiento computacional, ingeniería multimedia, acústica, sonido e innovación industrial para el sector público y productivo de Antioquia y Colombia."
+  },
+  "facultades": [
+    "Facultad de Ingenierías (Ingeniería de Datos y Software, Ingeniería de Sistemas Cibernéticos, Ingeniería Multimedia, Ingeniería de Sonido, Ingeniería Industrial, Ingeniería Ambiental)",
+    "Consultorio Tecnológico Bonaventuriano (CTB)",
+    "Dirección de Investigaciones y Transferencia de Conocimiento"
+  ],
+  "grupos_investigacion_minciencias": [
+    {
+      "sigla": "GIMSC",
+      "nombre": "Grupo de Investigación en Modelamiento y Simulación Computacional",
+      "clasificacion_minciencias": "A1",
+      "lineas": [
+        "Ingeniería del Software",
+        "Acústica y Procesamiento de Señal",
+        "Medio Ambiente y Desarrollo Territorial",
+        "Electrónica y Potencia"
+      ]
+    },
+    {
+      "sigla": "Geoinformática",
+      "nombre": "Grupo de Geoinformática Aplicada",
+      "clasificacion_minciencias": "Reconocido MinCiencias",
+      "lineas": [
+        "Sistemas de Información Geográfica (SIG)",
+        "Gestión Territorial y Análisis Geoespacial"
+      ]
+    }
+  ],
+  "unidad_consultoria_extension": {
+    "nombre": "Consultorio Tecnológico Bonaventuriano (CTB)",
+    "experiencia_anios": 14,
+    "mision": "Espacio interdisciplinario de la Facultad de Ingenierías que conecta la academia con el sector productivo y el Estado, ejecutando consultorías tecnológicas, desarrollo de software, ciencia de datos, analítica, multimedia, acústica y proyectos de innovación."
+  },
+  "capacidades_tecnicas": [
+    {
+      "area": "Ingeniería de Datos y Software (Data Science, Machine Learning y Arquitectura Cloud)",
+      "peso": 1.0,
+      "palabras_clave": [
+        "ingenieria de datos", "desarrollo de software", "machine learning", "inteligencia artificial", "analitica predictiva",
+        "ciencia de datos", "big data", "arquitectura cloud", "microservicios", "apis", "python", "bases de datos",
+        "modelos computacionales", "plataforma digital", "sistemas de informacion", "migracion a la nube", "deep learning",
+        "ia generativa", "dashboards", "business intelligence", "mineria de datos"
+      ],
+      "experiencia_meses": 144,
+      "grupos_investigacion": [
+        "GIMSC - Grupo de Investigación en Modelamiento y Simulación Computacional (MinCiencias A1)",
+        "Línea de Investigación en Ingeniería del Software"
+      ],
+      "laboratorios": ["Laboratorio de Cómputo Avanzado y Ciencia de Datos", "Salas Especializadas de Desarrollo de Software"]
+    },
+    {
+      "area": "Sistemas Cibernéticos, IoT, Robótica y Automatización",
+      "peso": 0.95,
+      "palabras_clave": [
+        "sistemas ciberneticos", "internet de las cosas", "iot", "robotica", "sensores", "telemetria",
+        "automatizacion", "redes de datos", "ciberseguridad", "seguridad informatica", "sistemas embebidos",
+        "computacion aplicada", "industria 4.0"
+      ],
+      "experiencia_meses": 120,
+      "grupos_investigacion": [
+        "GIMSC - Grupo de Investigación en Modelamiento y Simulación Computacional (MinCiencias A1)",
+        "Línea de Electrónica y Potencia"
+      ],
+      "laboratorios": ["Laboratorio de Robótica y Sistemas Inteligentes", "Laboratorio de Hardware y Redes"]
+    },
+    {
+      "area": "Ingeniería Multimedia, Experiencia de Usuario (UX/UI) y Entornos Virtuales",
+      "peso": 0.95,
+      "palabras_clave": [
+        "ingenieria multimedia", "realidad virtual", "realidad aumentada", "simulacion digital", "animacion",
+        "ux", "ui", "experiencia de usuario", "videojuegos", "gamificacion", "contenidos interactivos",
+        "modelado 3d", "plataformas interactivas", "entornos virtuales", "diseno interactivo"
+      ],
+      "experiencia_meses": 156,
+      "grupos_investigacion": [
+        "GIMSC - Grupo de Investigación en Modelamiento y Simulación Computacional (MinCiencias A1)",
+        "Programa de Ingeniería Multimedia USBMed"
+      ],
+      "laboratorios": ["Laboratorio de Realidad Virtual y Aumentada (VR/AR)", "Aulas de Animación y Modelado Digital"]
+    },
+    {
+      "area": "Ingeniería de Sonido, Acústica y Procesamiento de Audio",
+      "peso": 0.90,
+      "palabras_clave": [
+        "ingenieria de sonido", "acustica", "procesamiento de senal", "audio digital", "monitoreo de ruido",
+        "confort acustico", "estudios de grabacion", "electroacustica", "analisis espectral", "sonometria",
+        "insonorizacion", "mapas de ruido ambiental"
+      ],
+      "experiencia_meses": 180,
+      "grupos_investigacion": [
+        "GIMSC - Grupo de Investigación en Modelamiento y Simulación Computacional (MinCiencias A1)",
+        "Línea de Acústica y Procesamiento de Señal"
+      ],
+      "laboratorios": ["Estudios de Grabación Profesional USBMed", "Cámara Anecóica y Laboratorio de Acústica"]
+    },
+    {
+      "area": "Geoinformática, Gestión Territorial y Sostenibilidad",
+      "peso": 0.85,
+      "palabras_clave": [
+        "geoinformatica", "sistemas de informacion geografica", "sig", "analisis geoespacial", "gestion territorial",
+        "ordenamiento territorial", "sensores remotos", "ingenieria ambiental", "calidad del aire", "monitoreo ambiental"
+      ],
+      "experiencia_meses": 130,
+      "grupos_investigacion": [
+        "Grupo de Geoinformática Aplicada (MinCiencias)",
+        "Línea de Medio Ambiente y Desarrollo Territorial (GIMSC)"
+      ],
+      "laboratorios": ["Laboratorio de Información Geográfica y Teledetección"]
+    },
+    {
+      "area": "Consultoría Tecnológica, Interventoría e Innovación Pública",
+      "peso": 0.95,
+      "palabras_clave": [
+        "consultoria tecnologica", "interventoria", "supervision tecnica", "transformacion digital",
+        "gobierno digital", "peti", "arquitectura empresarial", "convenio interadministrativo",
+        "proyeccion social", "asesoria tecnica"
+      ],
+      "experiencia_meses": 168,
+      "grupos_investigacion": [
+        "Consultorio Tecnológico Bonaventuriano (CTB)"
+      ],
+      "laboratorios": ["Consultorio Tecnológico Bonaventuriano - Centro de Proyectos"]
+    }
+  ]
+}

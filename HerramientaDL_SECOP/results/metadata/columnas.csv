@@ -1,0 +1,86 @@
+nombre_tecnico,nombre_legible,tipo_dato,categoria,descripcion
+nombre_entidad,Nombre Entidad,text,Entidad,Nombre de la entidad del estado que publica el contrato
+nit_entidad,Nit Entidad,number,Entidad,NIT de la entidad del estado que publica el contrato
+departamento,Departamento,text,Geografia,Departamento en el cual se registró la entidad del estado que publica el contrato
+ciudad,Ciudad,text,Geografia,Ciudad en el cual se registró la entidad del estado que publica el contrato
+localizaci_n,Localización,text,Geografia,Ubicación completa de la entidad del estado que publica el contrato
+orden,Orden,text,Entidad,Orden entidad del estado que publica el contrato
+sector,Sector,text,Entidad,Sector entidad del estado que publica el contrato
+rama,Rama,text,Entidad,Rama del estado de la entidad que publica el contrato
+entidad_centralizada,Entidad Centralizada,text,Entidad,Define si la entidad es descentralizada o centralizada
+proceso_de_compra,Proceso de Compra,text,Identificacion,Identificador del proceso de compra publicado
+id_contrato,ID Contrato,text,Identificacion,"Identificador del contrato firmado, generado por la plataforma"
+referencia_del_contrato,Referencia del Contrato,text,Identificacion,"Identificador del contrato firmado, generado por la entidad del estado"
+estado_contrato,Estado Contrato,text,Contratacion,"Estado del contrato, frente a su ejecución, firma o liquidación"
+codigo_de_categoria_principal,Codigo de Categoria Principal,text,Clasificacion,Codigo UNSPSC de la categoría principal para el contrato
+descripcion_del_proceso,Descripcion del Proceso,text,Texto,Descripción del objeto del proceso de compra
+tipo_de_contrato,Tipo de Contrato,text,Contratacion,Tipo de contrato de acuerdo a su marco jurídico
+modalidad_de_contratacion,Modalidad de Contratacion,text,Contratacion,Modalidad de contratación de acuerdo al modelo de selección
+justificacion_modalidad_de,Justificacion Modalidad de Contratacion,text,Contratacion,"Justificación de la modalidad, el escenario bajo el cual se toma la decisión de definir una u otra modalidad de contratación"
+fecha_de_firma,Fecha de Firma,calendar_date,Tiempo,Fecha de firma del contrato electronico
+fecha_de_inicio_del_contrato,Fecha de Inicio del Contrato,calendar_date,Tiempo,Fecha de inicio de las responsabilidades contractuales
+fecha_de_fin_del_contrato,Fecha de Fin del Contrato,calendar_date,Tiempo,Fecha de fin de las responsabilidades contractuales
+condiciones_de_entrega,Condiciones de Entrega,text,Contratacion,Condiciones bajo las cuales se entrega el producto o servicio
+tipodocproveedor,TipoDocProveedor,text,Contratista,Tipo de documento del proveedor adjudicado
+documento_proveedor,Documento Proveedor,text,Contratista,Número de documento del proveedor adjudicado
+proveedor_adjudicado,Proveedor Adjudicado,text,Contratista,Nombre del proveedor adjudicado
+es_grupo,Es Grupo,text,Contratista,"Determina el proveedor es un grupo de entidades, existe un conjunto de datos de CCE que contiene la conformación de los grupos"
+es_pyme,Es Pyme,text,Contratista,Determina si la empresa es una Pyme
+habilita_pago_adelantado,Habilita Pago Adelantado,text,Ejecucion,Determina si el contrato tiene habilitada la opción de pago de adelantos
+liquidaci_n,Liquidación,text,Contratacion,Determina si el contrato ha sido liquidado
+obligaci_n_ambiental,Obligación Ambiental,text,Ejecucion,Determina si el contrato tiene compromisos de cumplimiento a obligaciones ambientales
+obligaciones_postconsumo,Obligaciones Postconsumo,text,Ejecucion,Determina si el contrato tiene compromisos de cumplimiento a obligaciones posteriores a la entrega del producto o prestación del servicio
+reversion,Reversion,text,Contratacion,Determina si el contrato ha sido reversado
+origen_de_los_recursos,Origen de los Recursos,text,Presupuesto,"Origen de los Recursos, a nivel presupuestal"
+destino_gasto,Destino Gasto,text,Presupuesto,"Destino del gasto, a nivel presupuestal"
+valor_del_contrato,Valor del Contrato,number,Valores_Economicos,Valor total del contrato
+valor_de_pago_adelantado,Valor de pago adelantado,number,Valores_Economicos,Valor del pago por adelantado
+valor_facturado,Valor Facturado,number,Valores_Economicos,Valor Facturado a la fecha
+valor_pendiente_de_pago,Valor Pendiente de Pago,number,Valores_Economicos,Valor Pendiente de Pago a la fecha
+valor_pagado,Valor Pagado,number,Valores_Economicos,Valor Pagado a la fecha
+valor_amortizado,Valor Amortizado,number,Valores_Economicos,Valor Amortizado a la fecha
+valor_pendiente_de,Valor Pendiente de Amortizacion,number,Valores_Economicos,Valor Pendiente de Amortizacion a la fecha
+valor_pendiente_de_ejecucion,Valor Pendiente de Ejecucion,number,Valores_Economicos,Valor Pendiente de Ejecucion a la fecha
+saldo_cdp,Saldo CDP,number,Valores_Economicos,Saldo del CDP asignado al proceso y al contrato
+saldo_vigencia,Saldo Vigencia,number,Valores_Economicos,Saldo actual para la vigencia del CDP asignado al proceso y al contrato
+espostconflicto,EsPostConflicto,text,Ejecucion,Determina si el proceso está asociado a algún evento de acuerdo de paz
+dias_adicionados,Dias adicionados,number,Tiempo,Días adicionados al contrato electrónico
+puntos_del_acuerdo,Puntos del Acuerdo,text,Ejecucion,"Pilares del acuerdo de paz, si el contrato es post conflicto"
+pilares_del_acuerdo,Pilares del Acuerdo,text,Ejecucion,Pilares del acuerdo de paz
+urlproceso,URLProceso,url,Identificacion,URL del proceso de compra en la plataforma SECOP II
+nombre_representante_legal,Nombre Representante Legal,text,Variables_Administrativas,Nombre del representante legal de la entidad
+nacionalidad_representante_legal,Nacionalidad Representante Legal,text,Variables_Administrativas,Nacionalidad del representante legal de la entidad
+domicilio_representante_legal,Domicilio Representante Legal,text,Variables_Administrativas,Dirección de domicilio del representante legal de la entidad
+tipo_de_identificaci_n_representante_legal,Tipo de Identificación Representante Legal,text,Variables_Administrativas,Tipo de identificación del representante legal de la entidad
+identificaci_n_representante_legal,Identificación Representante Legal,text,Variables_Administrativas,Numero de identificación del representante legal de la entidad
+g_nero_representante_legal,Género Representante Legal,text,Variables_Administrativas,Género sexual del representante legal de la entidad
+presupuesto_general_de_la_nacion_pgn,Presupuesto General de la Nacion – PGN,number,Presupuesto,Valor de origen de los recursos que corresponde al Presupuesto General de la Nacion – PGN
+sistema_general_de_participaciones,Sistema General de Participaciones,number,Presupuesto,Valor de origen de los recursos que corresponde al Sistema General de Participaciones
+sistema_general_de_regal_as,Sistema General de Regalías,number,Presupuesto,Valor de origen de los recursos que corresponde al Sistema General de Regalías
+recursos_propios_alcald_as_gobernaciones_y_resguardos_ind_genas_,Recursos Propios (Alcaldías y Gobernaciones),number,Presupuesto,Indica el valor de recursos de la entidad en el contrato electronico
+recursos_de_credito,Recursos de Credito,number,Presupuesto,Valor de origen de los recursos que corresponde a Recursos de Credito
+recursos_propios,"Otros Recursos (Especie, Privados, Cooperación, Propios Entidades Autónomas)",number,Presupuesto,Valor de origen de los recursos que corresponde a Recursos Propios
+ultima_actualizacion,Ultima Actualizacion,calendar_date,Otras,Fecha de última actualización del contrato electronico
+codigo_entidad,Codigo Entidad,number,Entidad,Codigo de la entidad en la plataforma SECOPII
+codigo_proveedor,Codigo Proveedor,text,Contratista,Codigo del proveedor edn la plataforma SECOPII
+fecha_inicio_liquidacion,Fecha Inicio Liquidacion,calendar_date,Otras,Fecha de inicio de liquidación del contrato electrónico
+fecha_fin_liquidacion,Fecha Fin Liquidacion,calendar_date,Otras,Fecha de fin de liquidación del contrato electrónico
+objeto_del_contrato,Objeto del Contrato,text,Texto,Objeto del contrato electrónico
+duraci_n_del_contrato,Duración del contrato,text,Tiempo,Describe la duración del contrato en el tiempo
+nombre_del_banco,Nombre del banco,text,Variables_Administrativas,Indica el nombre del banco en donde se consignaran los pagos del contrato
+tipo_de_cuenta,Tipo de cuenta,text,Variables_Administrativas,Tipo de cuenta en la que se se consignaran los pago del contrato
+n_mero_de_cuenta,Número de cuenta,text,Variables_Administrativas,Numero de cuenta en donde se haran los pagos del contrato
+el_contrato_puede_ser_prorrogado,El contrato puede ser prorrogado,text,Contratacion,Indica si el contrato puede ser o no prorrogado
+fecha_de_notificaci_n_de_prorrogaci_n,Fecha de notificación de prorrogación,calendar_date,Otras,Infica la fecha de notificación de la prorrogación del contrato
+nombre_ordenador_del_gasto,Nombre ordenador del gasto,text,Variables_Administrativas,Describe el nombre del ordenador del gasto de la entidad compradora
+tipo_de_documento_ordenador_del_gasto,Tipo de documento Ordenador del gasto,text,Variables_Administrativas,Indica el tipo de documento del ordenador del gasto de la entidad compradora
+n_mero_de_documento_ordenador_del_gasto,Número de documento Ordenador del gasto,text,Variables_Administrativas,Indica el número de documento del ordenador del gasto
+nombre_supervisor,Nombre supervisor,text,Variables_Administrativas,Describe el nombre del supervisor de la entidad compradora
+tipo_de_documento_supervisor,Tipo de documento supervisor,text,Variables_Administrativas,Indica el tipo de documento del supervisor de la entidad compradora
+n_mero_de_documento_supervisor,Número de documento supervisor,text,Variables_Administrativas,Indica el número de documento del supervisor
+nombre_ordenador_de_pago,Nombre Ordenador de Pago,text,Variables_Administrativas,Describe el nombre del Ordenador de Pago de la entidad compradora
+tipo_de_documento_ordenador_de_pago,Tipo de documento Ordenador de Pago,text,Variables_Administrativas,Indica el tipo de documento del Ordenador de Pago de la entidad compradora
+n_mero_de_documento_ordenador_de_pago,Número de documento Ordenador de Pago,text,Variables_Administrativas,Indica el número de documento del Ordenador de Pago
+documentos_tipo,Documentos Tipo,text,Contratacion,Indica si se utilizaron documentos tipo en el contrato
+descripcion_documentos_tipo,Descripcion Documentos Tipo,text,Contratacion,Descripción de los documentos tipo utilizados
+direcci_n_de_ejecuci_n_del_contrato,Dirección de ejecución del contrato,text,Geografia,Dirección en donde se ejecuto el contrato durante su vigencia

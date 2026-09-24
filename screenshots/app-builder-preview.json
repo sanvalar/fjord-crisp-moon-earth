@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "SECOP Analytics | Sistema de Inteligencia de Contratación Pública",
+      "hasCanvas": true,
+      "bodyTextLen": 3672,
+      "bodyTextHash": "c1280fcc3b23cd8d8d45a394a4dd92d56e137c6a1e00d25ec4ce500c32da2d4a",
+      "bodyTextPrefix": "TIC SECOP Analytics & Intelligence Observatorio de Contratación ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "SECOP Analytics | Sistema de Inteligencia de Contratación Pública",
+      "hasCanvas": true,
+      "bodyTextLen": 3662,
+      "bodyTextHash": "d46555f03d1331be960fb2e72810e3c459d506b4efde8bc20330fa17294925b1",
+      "bodyTextPrefix": "TIC SECOP Analytics & Intelligence Observatorio de Contratación ",
+      "horizontalOverflow": true,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND WARNING: this looks like a game/canvas app but /workspace/public/og.jpg is missing. Games and visually rich apps must ship a custom 1200x630 share card built from the app's own art — the default og.grok.me placeholder card is not acceptable for them. You are not done: open /workspace/.grok/skills/og/SKILL.md and finish the brand-asset pass.",
+    "BRAND WARNING: this looks like a game/canvas app but src/lib/og/site.json is missing \"type\": \"x:game\". X uses og:type=x:game to present the unfurl as a game card — set it in /workspace/src/lib/og/site.json per /workspace/.grok/skills/og/SKILL.md. Do not invent x:type or overload twitter:card as the game signal."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

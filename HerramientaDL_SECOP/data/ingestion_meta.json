@@ -1,0 +1,29 @@
+{
+  "base_historica": 213123,
+  "total_actual": 214604,
+  "insertados_acumulados": 1481,
+  "actualizados_acumulados": 1000,
+  "last_run": "2026-09-24T18:11:56.207984",
+  "last_status": "ok",
+  "sources": [
+    {
+      "name": "SECOP II SODA jbjy-vk9h",
+      "tic": 50,
+      "since": "2025-11-26T00:00:00.000"
+    },
+    {
+      "name": "SECOP I SODA f789-7hwg",
+      "tic": 44,
+      "since": "2025-12-04T00:00:00.000"
+    },
+    {
+      "name": "Scrapers complementarios",
+      "tic": 184
+    }
+  ],
+  "lambda": "si existe → UPDATE; si no existe → INSERT",
+  "total_antes": 214592,
+  "insertados": 12,
+  "actualizados": 255,
+  "duration_s": 8.49
+}

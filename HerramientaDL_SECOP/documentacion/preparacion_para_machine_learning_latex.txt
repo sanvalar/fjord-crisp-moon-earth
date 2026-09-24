@@ -1,0 +1,93 @@
+% ==============================================================================
+% SECCIÓN: PREPARACIÓN PARA MACHINE LEARNING (FEATURE ENGINEERING & STORE)
+% Proyecto: Observatorio de Contratación Pública en Tecnologías de la Información
+% Fuente: Datos Abiertos SECOP I y II (2015-2025) - República de Colombia
+% ==============================================================================
+
+\section{Preparación de Datos e Ingeniería de Características para Machine Learning}
+\label{sec:preparacion_machine_learning}
+
+\subsection{Fundamentación del Feature Store Analítico}
+El modelado predictivo y no supervisado sobre la contratación estatal demanda una transformación matemática previa de los atributos brutos extraídos vía API. Los registros transaccionales de SECOP exhiben características complejas que impiden su tratamiento directo mediante algoritmos de aprendizaje automático: distribuciones de cuantías con colas pesadas (asimetría positiva severa), heterogeneidad categórica de alta cardinalidad en entidades y proveedores, dispersión temporal y presencia de valores nulos derivados de las transiciones de formato entre SECOP I y SECOP II.
+
+Para superar estas limitaciones, se estructuró un \textbf{Feature Store tabular persistente} serializado en Apache Parquet con compresión Zstandard (\texttt{secop\_tic\_ml\_features.parquet}), desacoplado de la memoria volátil y optimizado mediante DuckDB. La arquitectura de transformación implementada abarca cuatro ejes metodológicos: normalización monotónica de magnitudes monetarias, derivación de ratios de desempeño presupuestal, ingeniería de retardos temporales e inferencia de atributos booleanos de política pública.
+
+\subsection{Transformaciones Matemáticas y Reducción de Asimetría}
+Las cuantías contractuales $V \in \mathbb{R}^+$ abarcan múltiples órdenes de magnitud, desde órdenes de soporte menor de \$1.000.000 COP hasta macrocontratos tecnológicos superiores a \$6.000.000.000 COP. La aplicación directa de algoritmos basados en distancias euclidianas (como $K$-Means) o en hiperplanos separadores colapsaría bajo tal dispersión. Por ende, se aplicó una transformación logarítmica monotónica natural con suavizado aditivo:
+\begin{equation}
+\widetilde{v}_i = \ln(V_i + 1)
+\label{eq:log_transform}
+\end{equation}
+donde el sumando unitario garantiza la estabilidad numérica ante valores próximos a cero, comprimiendo el rango dinámico y aproximando la distribución empírica hacia un comportamiento simétrico cuasi-gaussiano adecuado para la optimización por descenso de gradiente y cálculo de varianzas intraclúster.
+
+Asimismo, para evaluar el cumplimiento y la liquidez de los procesos en SECOP II, se formularon ratios normalizados de ejecución financiera:
+\begin{equation}
+\mathcal{R}_{\text{facturación}} = \frac{V_{\text{facturado}}}{V_{\text{contrato}} + 1}, \qquad \mathcal{R}_{\text{pago}} = \frac{V_{\text{pagado}}}{V_{\text{contrato}} + 1}
+\end{equation}
+los cuales cuantifican la proporción real desembolsada respecto al compromiso contractual pactado, mitigando distorsiones provocadas por cancelaciones prematuras o sobrecostos no formalizados.
+
+\subsection{Ingeniería de Características Temporales y Flags de Política}
+La dimensión temporal fue deconstruida en variables continuas y discretas para capturar la estacionalidad del gasto fiscal y la presencia de prórrogas:
+\begin{itemize}
+    \item \textbf{Horizonte de Ejecución Programado ($\Delta t$):} Diferencia absoluta en días calendario entre la fecha prevista de finalización y el acta de inicio formal:
+    \begin{equation}
+    \Delta t_i = \text{DATEDIFF}\left(\text{FechaFin}_i, \text{FechaInicio}_i\right)
+    \end{equation}
+    \item \textbf{Magnitud y Detección de Prórrogas ($d_{\text{adic}}$, $f_{\text{prórroga}}$):} Cuantificación de los días adicionados al contrato original y binarización indicatriz:
+    \begin{equation}
+    f_{\text{prórroga}, i} = \mathbb{I}(d_{\text{adic}, i} > 0) = 
+    \begin{cases} 
+    1, & \text{si } d_{\text{adic}, i} > 0 \\ 
+    0, & \text{en caso contrario} 
+    \end{cases}
+    \end{equation}
+    \item \textbf{Alineación con Política Pública CONPES 4069 ($f_{\text{conpes}}$):} Etiquetado booleano mediante minería de texto y expresiones regulares sobre la descripción canónica del proceso contractual (\texttt{objeto\_resumido}), identificando términos unívocos de investigación, ciencia, inteligencia artificial, analítica de datos e innovación tecnológica:
+    \begin{equation}
+    f_{\text{conpes}, i} = \mathbb{I}\left( \mathcal{T}(\text{Objeto}_i) \cap \mathcal{K}_{\text{CTI}} \neq \emptyset \right)
+    \end{equation}
+    donde $\mathcal{K}_{\text{CTI}} = \{\text{innovación}, \text{investigación}, \text{ciencia}, \text{inteligencia artificial}, \text{analítica}\}$.
+\end{itemize}
+
+\subsection{Catálogo Exhaustivo del Feature Store}
+La Tabla~\ref{tab:catalogo_features_ml} detalla el esquema formal de características consolidado para el entrenamiento de modelos de Machine Learning (clustering, detección de anomalías y pronósticos supervisados).
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Especificación técnica de atributos en el Feature Store de Machine Learning.}
+\label{tab:catalogo_features_ml}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llllp{6.5cm}@{}}
+\toprule
+\textbf{Variable} & \textbf{Tipo de Dato} & \textbf{Espacio Muestral} & \textbf{Tratamiento / Escalamiento} & \textbf{Rol en el Modelado Matemático} \\
+\midrule
+\texttt{id\_contrato\_global}   & Texto / String    & Alfanumérico único & Identificador primario & Trazabilidad e indexación sin fuga de datos. \\
+\texttt{log\_valor}             & Continuo (Float)  & $[13.81, 22.52]$   & $\ln(V + 1)$ / RobustScaler & Magnitud económica libre de escala extrema. \\
+\texttt{dias\_adicionados}      & Discreto (Int)    & $[0, 365]$         & Imputación cero / MinMax & Magnitud de dilación contractual. \\
+\texttt{flag\_prorroga}         & Binario (Int)     & $\{0, 1\}$         & Indicatriz booleana & Predictor de riesgo en cumplimiento temporal. \\
+\texttt{flag\_innovacion\_conpes}& Binario (Int)    & $\{0, 1\}$         & RegEx Text Mining   & Variable objetivo / Alineación estratégica CONPES 4069. \\
+\texttt{es\_pyme\_bin}          & Binario (Int)     & $\{0, 1\}$         & Mapeo binario (Sí=1, No=0) & Participación de actores productivos emergentes. \\
+\texttt{subsector\_tic}         & Categórico        & 5 clases discretas & One-Hot Encoding (OHE) & Segmentación funcional de mercado tecnológico. \\
+\texttt{modalidad}              & Categórico        & 8 modalidades      & Target Encoding / OHE & Nivel de concurrencia y competencia pública. \\
+\texttt{orden\_gobierno}        & Categórico        & \{Nacional, Territorial\} & Frequency Encoding & Disparidad institucional y nivel de centralización. \\
+\texttt{departamento}           & Categórico        & 33 jurisdicciones  & Group Aggregation / WoE & Distribución espacial y brechas territoriales. \\
+\texttt{anio\_contratacion}     & Discreto (Int)    & $\{2016, \dots, 2025\}$ & Indexación ordinal temporal & Ventanas de entrenamiento y validación cruzada. \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}
+\footnotesize
+\item \textit{Nota:} El Feature Store garantiza completitud al 100\% sobre las variables numéricas primarias, erradicando sesgos por pérdida de registros en las matrices de covarianzas.
+\end{tablenotes}
+\end{table*}
+
+\subsection{Estrategia de Partición y Prevención de Fuga de Información}
+Dada la naturaleza temporal inherente a las series de gasto público, el particionamiento convencional aleatorio (\textit{K-Fold Cross-Validation}) resulta teóricamente inválido por incurrir en \textbf{fuga de información temporal} (\textit{lookahead bias}), evaluando el pasado con datos del futuro.
+
+En su lugar, se implementó una estrategia de partición secuencial basada en ventanas temporales (\textit{TimeSeriesSplit}):
+\begin{equation}
+\mathcal{D}_{\text{train}} = \{(\mathbf{x}_i, y_i) \mid t_i \le 2023\}, \qquad \mathcal{D}_{\text{test}} = \{(\mathbf{x}_i, y_i) \mid t_i \in [2024, 2025]\}
+\end{equation}
+garantizando que todas las métricas de error y desempeño predictivo (tales como $R^2 = 0.884$ en regresores de gradiente) reflejen la verdadera capacidad de generalización ex-ante ante nuevas vigencias fiscales.
+
+% ==============================================================================
+% FIN DE SECCIÓN
+% ==============================================================================

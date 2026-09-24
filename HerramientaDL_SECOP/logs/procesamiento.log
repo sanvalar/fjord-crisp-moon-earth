@@ -1,0 +1,44 @@
+2026-09-03 21:17:53,291 [INFO] secop_ii.main: === INICIANDO PIPELINE SECOP II [Modo: test_api] ===
+2026-09-03 21:17:53,291 [INFO] secop_ii.main: Construyendo diccionario de datos y exportación de columnas...
+2026-09-03 21:17:53,291 [INFO] secop_ii.api: Consultando metadata oficial desde https://www.datos.gov.co/api/views/jbjy-vk9h.json...
+2026-09-03 21:17:54,793 [INFO] secop_ii.main: Metadata exportada en C:\Users\jotma\Desktop\csv\results\metadata\columnas.csv y diccionario_datos.txt
+2026-09-03 21:17:54,794 [INFO] secop_ii.main: Ejecutando prueba rápida de conexión y descarga de API (500 registros)...
+2026-09-03 21:17:54,796 [INFO] secop_ii.downloader: Checkpoint recuperado: {'last_offset': 5000, 'total_downloaded': 5000, 'completed': False, 'blocks_downloaded': 2}
+2026-09-03 21:17:54,798 [INFO] secop_ii.downloader: Checkpoint reiniciado.
+2026-09-03 21:17:54,798 [INFO] secop_ii.downloader: Iniciando descarga en bloques. Offset inicial: 0, chunk_size: 5000, filtro: [fecha_de_firma >= '2015-01-01T00:00:00.000' AND fecha_de_firma <= '2025-12-31T23:59:59.999']
+2026-09-03 21:17:54,798 [INFO] secop_ii.downloader: Descargando bloque: offset=0, limit=500...
+2026-09-03 21:17:55,764 [INFO] secop_ii.downloader: Bloque recibido: 500 filas en 0.96s (519.0 filas/s). Total acumulado: 500
+2026-09-03 21:17:55,967 [INFO] secop_ii.processor: ParquetWriter inicializado en C:\Users\jotma\Desktop\csv\data\parquet\SECOP_II_2015_2025.parquet con compresión ZSTD.
+2026-09-03 21:17:56,047 [INFO] secop_ii.downloader: Descarga de muestra completada con éxito (500 registros).
+2026-09-03 21:17:56,049 [INFO] secop_ii.processor: Escritura Parquet completada. Total filas escritas: 500
+2026-09-03 21:17:56,050 [INFO] secop_ii.main: === FASE DE AUDITORÍA DE CALIDAD ===
+2026-09-03 21:17:56,077 [INFO] secop_ii.quality: Iniciando auditoría de calidad de datos con DuckDB...
+2026-09-03 21:17:56,105 [INFO] secop_ii.quality: Total registros a auditar: 500
+2026-09-03 21:17:56,711 [INFO] secop_ii.quality: Auditoría guardada exitosamente en C:\Users\jotma\Desktop\csv\results\metadata\calidad_datos.csv
+2026-09-03 21:17:56,712 [INFO] secop_ii.quality: Comprobando reglas de integridad financiera y cronológica...
+2026-09-03 21:17:56,758 [INFO] secop_ii.main: === FASE ANALÍTICA (DUCKDB) ===
+2026-09-03 21:17:56,798 [INFO] secop_ii.analysis: DuckDB conectado con vista sobre read_parquet('C:/Users/jotma/Desktop/csv/data/parquet/SECOP_II_2015_2025.parquet')
+2026-09-03 21:17:56,799 [INFO] secop_ii.analysis: Ejecutando suite analítica completa (18 KPIs con DuckDB)...
+2026-09-03 21:17:57,107 [INFO] secop_ii.analysis: Análisis completado. Todos los 18 KPIs guardados en C:\Users\jotma\Desktop\csv\results\resumenes
+2026-09-03 21:17:57,107 [INFO] secop_ii.main: === FASE DE VISUALIZACIÓN ===
+2026-09-03 21:17:57,107 [INFO] secop_ii.visualization: Generando gráficos analíticos agregados con Matplotlib...
+2026-09-03 21:17:59,125 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-09-03 21:17:59,135 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-09-03 21:17:59,166 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-09-03 21:17:59,168 [INFO] matplotlib.category: Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-09-03 21:18:02,654 [INFO] secop_ii.visualization: Visualizaciones generadas en C:\Users\jotma\Desktop\csv\results\visualizaciones
+2026-09-03 21:18:02,655 [INFO] secop_ii.main: === FASE MACHINE LEARNING PREPARATION ===
+2026-09-03 21:18:02,708 [INFO] secop_ii.ml_preparation: Preparando tabla de features para Machine Learning desde C:\Users\jotma\Desktop\csv\data\parquet\SECOP_II_2015_2025.parquet...
+2026-09-03 21:18:02,755 [INFO] secop_ii.ml_preparation: Tabla de Machine Learning creada exitosamente en C:\Users\jotma\Desktop\csv\results\ml\secop_ii_ml_features.parquet
+2026-09-03 21:18:02,756 [INFO] secop_ii.main: === FASE COMPARATIVA SECOP I vs SECOP II ===
+2026-09-03 21:18:02,756 [INFO] secop_ii.comparison: Obteniendo columnas de SECOP I y SECOP II...
+2026-09-03 21:18:06,017 [INFO] secop_ii.comparison: Informe comparativo guardado en C:\Users\jotma\Desktop\csv\results\metadata\comparativa_secop_i_vs_ii.md
+2026-09-03 21:18:06,018 [INFO] secop_ii.main: ============================================================
+2026-09-03 21:18:06,018 [INFO] secop_ii.main: RESUMEN FINAL DE EJECUCIÓN
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Registros procesados vía API: 500
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Periodo utilizado: 2015 - 2025
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Tamaño archivo Parquet (ZSTD): 0.23 MB
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Tiempo total: 12.73 s (0.21 min)
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Velocidad promedio: 39.3 registros/s
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: • Errores críticos: 0
+2026-09-03 21:18:06,019 [INFO] secop_ii.main: ============================================================

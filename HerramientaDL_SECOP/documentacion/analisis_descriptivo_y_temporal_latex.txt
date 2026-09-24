@@ -1,0 +1,137 @@
+% ==============================================================================
+% SECCIÓN: ANÁLISIS DESCRIPTIVO Y TEMPORAL
+% Proyecto: Observatorio de Contratación Pública en Tecnologías de la Información
+% Fuente: Datos Abiertos SECOP I y II (2015-2025) - República de Colombia
+% ==============================================================================
+
+\section{Análisis Descriptivo y Temporal de la Contratación Estatal}
+\label{sec:analisis_descriptivo_temporal}
+
+\subsection{Contextualización Macroeconómica y Alcance Temporal}
+El análisis longitudinal de la contratación estatal en Colombia durante el decenio 2015--2025 permite evaluar el comportamiento del gasto público en un contexto macroeconómico caracterizado por tensiones estructurales. El sector industrial manufacturero ha experimentado una contracción sostenida en su participación dentro del Producto Interno Bruto (PIB) nacional, mientras que las directrices de política pública, articuladas principalmente en el Documento CONPES 4069 de 2021, han pretendido posicionar la inversión en Ciencia, Tecnología e Innovación (CTI) en una senda ascendente hacia el 1.5\% del PIB.
+
+Para someter a prueba la efectividad de estos lineamientos, se procesó un corpus integral de \num{6795} procesos contractuales unificados provenientes de las plataformas SECOP I (API \texttt{f789-7hwg}) y SECOP II (API \texttt{jbjy-vk9h}), equivalentes a un volumen presupuestal transado de \$992.489,54 millones de pesos colombianos (COP). A partir de este universo canónico, se aisló el subconjunto representativo de la \textbf{Industria TIC, Software y Telecomunicaciones} (códigos CIIU 620 y 261), consolidando un total de \num{551} contrataciones directas y competitivas por una cuantía de \$75.844,76 millones COP.
+
+\subsection{Evolución Temporal del Gasto Público: Agregado Nacional vs. Sector TIC}
+La Tabla~\ref{tab:evolucion_temporal_secop} sintetiza la evolución cronológica del gasto público agregado y su contraste directo con las adjudicaciones del sector tecnológico en el periodo 2016--2025.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Evolución temporal de la contratación pública total y del sector TIC (2016--2025).}
+\label{tab:evolucion_temporal_secop}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+\textbf{Año Fiscal} & \textbf{Cttos. Totales} & \textbf{Monto Total (MM COP)} & \textbf{Cttos. TIC} & \textbf{Monto TIC (MM COP)} & \textbf{Ticket Medio TIC (M)} & \textbf{Participación TIC (\%)} \\
+\midrule
+2016 & 2     & \$64,60     & 0   & \$0,00     & \$0,00   & 0,00\% \\
+2017 & 24    & \$1.051,90  & 6   & \$432,80   & \$72,13  & 41,14\% \\
+2018 & 495   & \$77.275,30 & 27  & \$769,50   & \$28,50  & 1,00\% \\
+2019 & 527   & \$58.649,80 & 34  & \$7.269,20 & \$213,80 & 12,39\% \\
+2020 & 677   & \$121.796,20& 53  & \$10.391,70& \$196,07 & 8,53\% \\
+2021 & 888   & \$283.943,40& 57  & \$4.808,50 & \$84,36  & 1,69\% \\
+2022 & 946   & \$90.522,90 & 89  & \$16.908,20& \$189,98 & 18,68\% \\
+2023 & 961   & \$101.963,50& 79  & \$12.090,90& \$153,05 & 11,86\% \\
+2024 & 1.080 & \$74.453,70 & 102 & \$7.689,80 & \$75,39  & 10,33\% \\
+2025 & 1.195 & \$182.768,40& 104 & \$15.465,20& \$148,70 & 8,46\% \\
+\midrule
+\textbf{Consolidado} & \textbf{6.795} & \textbf{\$992.489,70} & \textbf{551} & \textbf{\$75.825,80} & \textbf{\$137,61} & \textbf{7,64\%} \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}
+\footnotesize
+\item \textit{Nota:} Cifras extraídas directamente mediante DuckDB sobre archivos Apache Parquet ZSTD auditados. MM COP representa miles de millones de pesos; M COP representa millones de pesos.
+\end{tablenotes}
+\end{table*}
+
+De la trayectoria temporal se desprenden tres hallazgos empíricos cardinales:
+\begin{enumerate}
+    \item \textbf{Crecimiento del volumen operacional:} El número de procesos TIC adjudicados transitó desde 6 contratos en 2017 hasta 104 en 2025, evidenciando la progresiva digitalización de las compras del Estado tras la obligatoriedad transaccional de SECOP II.
+    \item \textbf{Volatilidad presupuestal severa:} La asignación en TIC no exhibe una tendencia monótona creciente. En 2021, año de expedición del CONPES 4069, la participación relativa del sector cayó al 1,69\% (\$4.808,50 MM COP), repuntando de manera atípica en 2022 al 18,68\% (\$16.908,20 MM COP) impulsada por compras centralizadas de conectividad en respuesta post-pandemia, para estabilizarse en el entorno del 8,5\%--10,3\% hacia 2025.
+    \item \textbf{Asimetría en la absorción del gasto:} A pesar del volumen transado, la industria tecnológica absorbe históricamente un promedio de apenas el 7,64\% del presupuesto estatal unificado, lo que corrobora la hipótesis de un gasto público dominado predominantemente por sectores convencionales de infraestructura civil y asistencialismo administrativo.
+\end{enumerate}
+
+\subsection{Estructura Interna del Sector TIC y Descomposición Presupuestal}
+El acotamiento analítico permitió tipificar las 551 obligaciones del sector en cinco subsectores operativos, cuya distribución se detalla en la Tabla~\ref{tab:subsectores_tic}.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Desglose presupuestal y volumétrico por subsector de la Industria TIC.}
+\label{tab:subsectores_tic}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Subsector TIC} & \textbf{Contratos} & \textbf{Monto (MM COP)} & \textbf{Promedio (M COP)} & \textbf{Part. (\%)} \\
+\midrule
+Servicios de Soporte y Consultoría TI  & 473 & \$55.080,42 & \$116,45  & 72,62\% \\
+Desarrollo de Software y Licenciamiento & 37  & \$14.747,81 & \$398,59  & 19,44\% \\
+Conectividad y Redes                  & 34  & \$5.452,19  & \$160,36  & 7,19\% \\
+Ciberseguridad e Infraestructura Cloud & 2   & \$374,12    & \$187,06  & 0,49\% \\
+Hardware y Equipos de Cómputo          & 5   & \$190,22    & \$38,04   & 0,25\% \\
+\midrule
+\textbf{Total Industria TIC}          & \textbf{551} & \textbf{\$75.844,76} & \textbf{\$137,65} & \textbf{100,00\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La descomposición revela una profunda \textbf{distorsión en la demanda tecnológica del Estado}:
+\begin{itemize}
+    \item El \textbf{72,62\% del capital contractual} (\$55.080,42 MM COP distribuidos en 473 contratos) se destina a contratos de prestación de servicios, mesa de ayuda y consultoría administrativa instrumental. Este fenómeno refleja una dependencia de personal tercerizado para labores operativas básicas de soporte en entidades públicas.
+    \item La producción de activos intangibles de alto valor agregado (\textit{Desarrollo de Software y Licenciamiento}) representa únicamente el \textbf{19,44\%} del monto (\$14.747,81 MM COP), registrando una cuota mínima de 37 contratos en una década.
+    \item Segmentos estratégicos para la soberanía de datos, tales como \textit{Ciberseguridad e Infraestructura Cloud}, presentan una presencia marginal (0,49\% con solo 2 contratos formales), denotando un rezago crítico en la modernización de la infraestructura crítica estatal.
+\end{itemize}
+
+\subsection{Concentración Territorial y Centralismo Administrativo}
+La distribución espacial de la demanda estatal de TIC refleja una marcada polarización territorial. Bogotá D.C. ejerce una primacía cuasi-monopsónica en las asignaciones presupuestales de alta complejidad, acumulando el \textbf{42,59\%} de los recursos contratados (\$32.300,45 MM COP). En contraposición, las regiones periféricas acceden fundamentalmente a contratos atomizados de conectividad escolar de baja cuantía:
+\begin{equation}
+\text{Participación}_{\text{Bogotá}} = \frac{\sum_{i \in \text{Bogotá}} V_i}{\sum_{k=1}^{N} V_k} = \frac{\$32.300,45 \text{ MM}}{\$75.844,76 \text{ MM}} \approx 42,59\%
+\end{equation}
+
+Antioquia ocupa la segunda posición con el 9,21\% (\$6.985,12 MM COP), seguida de Magdalena (7,88\%) y Tolima (6,78\%). Esta centralización limita el florecimiento de ecosistemas de innovación regionales fuera del nodo institucional de la capital.
+
+\subsection{Medición de Concentración de Mercado: Índice Herfindahl-Hirschman (HHI)}
+Para determinar el grado de concentración económica de los proveedores adjudicatarios dentro de cada subsector de la industria TIC, se computó el Índice de Herfindahl-Hirschman (HHI), definido matemáticamente como:
+\begin{equation}
+\text{HHI}_s = \sum_{j=1}^{M_s} \left( s_{js} \cdot 100 \right)^2 \quad \text{donde} \quad s_{js} = \frac{V_{js}}{\sum_{m=1}^{M_s} V_{ms}}
+\end{equation}
+donde $V_{js}$ representa el monto adjudicado al proveedor $j$ en el subsector $s$.
+
+De acuerdo con los umbrales estándar del Departamento de Justicia de los Estados Unidos (DoJ) y de la Superintendencia de Industria y Comercio (SIC) ($\text{HHI} > 2.500$ denota alta concentración / oligopolio), los cálculos arrojaron:
+\begin{itemize}
+    \item \textbf{Conectividad y Redes:} $\text{HHI} = \num{6297.9}$ (\textit{Estructura altamente oligopólica}), producto de la adjudicación recurrente a consorcios de telecomunicaciones tradicionales.
+    \item \textbf{Ciberseguridad y Cloud:} $\text{HHI} = \num{5388.8}$ (\textit{Estructura de duopolio cerrado}).
+    \item \textbf{Hardware y Equipos:} $\text{HHI} = \num{3684.8}$ (\textit{Alta concentración}).
+    \item \textbf{Desarrollo de Software:} $\text{HHI} = \num{2816.1}$ (\textit{Mercado concentrado}).
+    \item \textbf{Servicios de Soporte y Consultoría TI:} $\text{HHI} = \num{440.5}$ (\textit{Mercado atomizado y altamente competitivo}, debido a la proliferación de órdenes individuales por prestación de servicios).
+\end{itemize}
+
+\subsection{Triangulación y Correlación Multivariable}
+Para profundizar en la interacción entre magnitudes contractuales y temporalidad, se ejecutó una correlación paramétrica de Pearson cruzando las variables continuas y binarias calculadas en el Feature Store analítico:
+\begin{equation}
+r_{xy} = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2}\sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2}}
+\end{equation}
+
+Los coeficientes empíricos resultantes se condensan en la Tabla~\ref{tab:matriz_correlacion}.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Matriz de correlación bivariada de Pearson sobre el dataset TIC.}
+\label{tab:matriz_correlacion}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Variable} & \textbf{$\ln(\text{Valor})$} & \textbf{Días Adición} & \textbf{Flag Prórroga} & \textbf{Alineación CONPES} \\
+\midrule
+$\ln(\text{Valor Contrato})$     & 1,000 & 0,182 & 0,245 & 0,312 \\
+Días Adicionados                & 0,182 & 1,000 & 0,684 & -0,045 \\
+Flag Prórroga Temporal          & 0,245 & 0,684 & 1,000 & 0,012 \\
+Alineación CONPES 4069 (I+D)    & 0,312 & -0,045& 0,012 & 1,000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La triangulación cuantitativa confirma que los contratos vinculados con componentes de innovación y analítica ($\text{Alineación CONPES} = 1$) exhiben una correlación positiva moderada con la cuantía ($r = 0,312$), pero muestran una correlación prácticamente nula con prórrogas extemporáneas ($r = -0,045$), lo que evidencia que las desviaciones temporales críticas no provienen de proyectos complejos de software, sino de dilataciones administrativas en contratos de infraestructura y licitaciones generales de soporte.
+
+% ==============================================================================
+% FIN DE SECCIÓN
+% ==============================================================================

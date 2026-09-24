@@ -1,0 +1,24 @@
+Concepto,Campo_SECOP_I,Campo_SECOP_II,Descripcion
+UID / id_contrato,uid,id_contrato,Identificador del contrato
+Proceso de Compra,numero_de_proceso,proceso_de_compra,Código del proceso contractual
+Nombre Entidad,nombre_de_la_entidad,nombre_entidad,Razón social de la entidad pública
+NIT Entidad,nit_de_la_entidad,nit_entidad,Identificación tributaria de la entidad
+Código Entidad,c_digo_de_la_entidad,codigo_entidad,Código asignado a la entidad
+Departamento,departamento_entidad,departamento,Ubicación geográfica del departamento
+Municipio / Ciudad,municipio_entidad,ciudad,Municipio sede o de ejecución
+Orden Entidad,orden_entidad,orden,"Nivel territorial (Nacional, Territorial)"
+Tipo Proceso / Modalidad,tipo_de_proceso,modalidad_de_contratacion,"Modalidad contractual (Licitación, Directa, etc.)"
+Estado Proceso / Contrato,estado_del_proceso,estado_contrato,"Estado contractual (Celebrado, En ejecución, Terminado)"
+Objeto Contrato,detalle_del_objeto_a_contratar,objeto_del_contrato,Descripción detallada del objeto contractual
+Tipo de Contrato,tipo_de_contrato,tipo_de_contrato,"Naturaleza (Prestación de servicios, Obra, Suministro)"
+Fecha Firma,fecha_de_firma_del_contrato,fecha_de_firma,Fecha en que se perfeccionó el contrato
+Fecha Inicio,fecha_de_inicio_de_ejecucion,fecha_de_inicio_del_contrato,Inicio formal de la ejecución
+Fecha Fin,fecha_de_fin_de_ejecucion,fecha_de_fin_del_contrato,Fecha prevista o real de terminación
+Valor del Contrato,cuantia_contrato,valor_del_contrato,Valor económico pactado
+Nombre Proveedor,nom_raz_social_contratista,proveedor_adjudicado,Nombre o razón social del contratista
+Documento Proveedor,identificacion_del_contratista,documento_proveedor,Cédula o NIT del contratista
+Tipo Documento Proveedor,tipo_doc_representante_legal,tipodocproveedor,Tipo de documento legal
+Plazo / Duración,plazo_de_ejec_del_contrato,duraci_n_del_contrato,Plazo contractual
+Clasificación UNSPSC,id_sub_unidad_ejecutora,codigo_de_categoria_principal,Clasificación de bienes y servicios
+Origen Recursos,origen_de_los_recursos,origen_de_los_recursos,Fuente presupuestal
+Compromiso Presupuestal / CDP,numero_del_compromiso,saldo_cdp,Registro presupuestal de respaldo

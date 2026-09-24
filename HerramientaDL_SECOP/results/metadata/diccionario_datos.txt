@@ -1,0 +1,513 @@
+DICCIONARIO DE DATOS OFICIAL - SECOP II (jbjy-vk9h)
+============================================================
+
+Campo: nombre_entidad
+Nombre: Nombre Entidad
+Categoría: Entidad
+Tipo: text
+Descripción: Nombre de la entidad del estado que publica el contrato
+----------------------------------------
+Campo: nit_entidad
+Nombre: Nit Entidad
+Categoría: Entidad
+Tipo: number
+Descripción: NIT de la entidad del estado que publica el contrato
+----------------------------------------
+Campo: departamento
+Nombre: Departamento
+Categoría: Geografia
+Tipo: text
+Descripción: Departamento en el cual se registró la entidad del estado que publica el contrato
+----------------------------------------
+Campo: ciudad
+Nombre: Ciudad
+Categoría: Geografia
+Tipo: text
+Descripción: Ciudad en el cual se registró la entidad del estado que publica el contrato
+----------------------------------------
+Campo: localizaci_n
+Nombre: Localización
+Categoría: Geografia
+Tipo: text
+Descripción: Ubicación completa de la entidad del estado que publica el contrato
+----------------------------------------
+Campo: orden
+Nombre: Orden
+Categoría: Entidad
+Tipo: text
+Descripción: Orden entidad del estado que publica el contrato
+----------------------------------------
+Campo: sector
+Nombre: Sector
+Categoría: Entidad
+Tipo: text
+Descripción: Sector entidad del estado que publica el contrato
+----------------------------------------
+Campo: rama
+Nombre: Rama
+Categoría: Entidad
+Tipo: text
+Descripción: Rama del estado de la entidad que publica el contrato
+----------------------------------------
+Campo: entidad_centralizada
+Nombre: Entidad Centralizada
+Categoría: Entidad
+Tipo: text
+Descripción: Define si la entidad es descentralizada o centralizada
+----------------------------------------
+Campo: proceso_de_compra
+Nombre: Proceso de Compra
+Categoría: Identificacion
+Tipo: text
+Descripción: Identificador del proceso de compra publicado
+----------------------------------------
+Campo: id_contrato
+Nombre: ID Contrato
+Categoría: Identificacion
+Tipo: text
+Descripción: Identificador del contrato firmado, generado por la plataforma
+----------------------------------------
+Campo: referencia_del_contrato
+Nombre: Referencia del Contrato
+Categoría: Identificacion
+Tipo: text
+Descripción: Identificador del contrato firmado, generado por la entidad del estado
+----------------------------------------
+Campo: estado_contrato
+Nombre: Estado Contrato
+Categoría: Contratacion
+Tipo: text
+Descripción: Estado del contrato, frente a su ejecución, firma o liquidación
+----------------------------------------
+Campo: codigo_de_categoria_principal
+Nombre: Codigo de Categoria Principal
+Categoría: Clasificacion
+Tipo: text
+Descripción: Codigo UNSPSC de la categoría principal para el contrato
+----------------------------------------
+Campo: descripcion_del_proceso
+Nombre: Descripcion del Proceso
+Categoría: Texto
+Tipo: text
+Descripción: Descripción del objeto del proceso de compra
+----------------------------------------
+Campo: tipo_de_contrato
+Nombre: Tipo de Contrato
+Categoría: Contratacion
+Tipo: text
+Descripción: Tipo de contrato de acuerdo a su marco jurídico
+----------------------------------------
+Campo: modalidad_de_contratacion
+Nombre: Modalidad de Contratacion
+Categoría: Contratacion
+Tipo: text
+Descripción: Modalidad de contratación de acuerdo al modelo de selección
+----------------------------------------
+Campo: justificacion_modalidad_de
+Nombre: Justificacion Modalidad de Contratacion
+Categoría: Contratacion
+Tipo: text
+Descripción: Justificación de la modalidad, el escenario bajo el cual se toma la decisión de definir una u otra modalidad de contratación
+----------------------------------------
+Campo: fecha_de_firma
+Nombre: Fecha de Firma
+Categoría: Tiempo
+Tipo: calendar_date
+Descripción: Fecha de firma del contrato electronico
+----------------------------------------
+Campo: fecha_de_inicio_del_contrato
+Nombre: Fecha de Inicio del Contrato
+Categoría: Tiempo
+Tipo: calendar_date
+Descripción: Fecha de inicio de las responsabilidades contractuales
+----------------------------------------
+Campo: fecha_de_fin_del_contrato
+Nombre: Fecha de Fin del Contrato
+Categoría: Tiempo
+Tipo: calendar_date
+Descripción: Fecha de fin de las responsabilidades contractuales
+----------------------------------------
+Campo: condiciones_de_entrega
+Nombre: Condiciones de Entrega
+Categoría: Contratacion
+Tipo: text
+Descripción: Condiciones bajo las cuales se entrega el producto o servicio
+----------------------------------------
+Campo: tipodocproveedor
+Nombre: TipoDocProveedor
+Categoría: Contratista
+Tipo: text
+Descripción: Tipo de documento del proveedor adjudicado
+----------------------------------------
+Campo: documento_proveedor
+Nombre: Documento Proveedor
+Categoría: Contratista
+Tipo: text
+Descripción: Número de documento del proveedor adjudicado
+----------------------------------------
+Campo: proveedor_adjudicado
+Nombre: Proveedor Adjudicado
+Categoría: Contratista
+Tipo: text
+Descripción: Nombre del proveedor adjudicado
+----------------------------------------
+Campo: es_grupo
+Nombre: Es Grupo
+Categoría: Contratista
+Tipo: text
+Descripción: Determina el proveedor es un grupo de entidades, existe un conjunto de datos de CCE que contiene la conformación de los grupos
+----------------------------------------
+Campo: es_pyme
+Nombre: Es Pyme
+Categoría: Contratista
+Tipo: text
+Descripción: Determina si la empresa es una Pyme
+----------------------------------------
+Campo: habilita_pago_adelantado
+Nombre: Habilita Pago Adelantado
+Categoría: Ejecucion
+Tipo: text
+Descripción: Determina si el contrato tiene habilitada la opción de pago de adelantos
+----------------------------------------
+Campo: liquidaci_n
+Nombre: Liquidación
+Categoría: Contratacion
+Tipo: text
+Descripción: Determina si el contrato ha sido liquidado
+----------------------------------------
+Campo: obligaci_n_ambiental
+Nombre: Obligación Ambiental
+Categoría: Ejecucion
+Tipo: text
+Descripción: Determina si el contrato tiene compromisos de cumplimiento a obligaciones ambientales
+----------------------------------------
+Campo: obligaciones_postconsumo
+Nombre: Obligaciones Postconsumo
+Categoría: Ejecucion
+Tipo: text
+Descripción: Determina si el contrato tiene compromisos de cumplimiento a obligaciones posteriores a la entrega del producto o prestación del servicio
+----------------------------------------
+Campo: reversion
+Nombre: Reversion
+Categoría: Contratacion
+Tipo: text
+Descripción: Determina si el contrato ha sido reversado
+----------------------------------------
+Campo: origen_de_los_recursos
+Nombre: Origen de los Recursos
+Categoría: Presupuesto
+Tipo: text
+Descripción: Origen de los Recursos, a nivel presupuestal
+----------------------------------------
+Campo: destino_gasto
+Nombre: Destino Gasto
+Categoría: Presupuesto
+Tipo: text
+Descripción: Destino del gasto, a nivel presupuestal
+----------------------------------------
+Campo: valor_del_contrato
+Nombre: Valor del Contrato
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor total del contrato
+----------------------------------------
+Campo: valor_de_pago_adelantado
+Nombre: Valor de pago adelantado
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor del pago por adelantado
+----------------------------------------
+Campo: valor_facturado
+Nombre: Valor Facturado
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Facturado a la fecha
+----------------------------------------
+Campo: valor_pendiente_de_pago
+Nombre: Valor Pendiente de Pago
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Pendiente de Pago a la fecha
+----------------------------------------
+Campo: valor_pagado
+Nombre: Valor Pagado
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Pagado a la fecha
+----------------------------------------
+Campo: valor_amortizado
+Nombre: Valor Amortizado
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Amortizado a la fecha
+----------------------------------------
+Campo: valor_pendiente_de
+Nombre: Valor Pendiente de Amortizacion
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Pendiente de Amortizacion a la fecha
+----------------------------------------
+Campo: valor_pendiente_de_ejecucion
+Nombre: Valor Pendiente de Ejecucion
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Valor Pendiente de Ejecucion a la fecha
+----------------------------------------
+Campo: saldo_cdp
+Nombre: Saldo CDP
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Saldo del CDP asignado al proceso y al contrato
+----------------------------------------
+Campo: saldo_vigencia
+Nombre: Saldo Vigencia
+Categoría: Valores_Economicos
+Tipo: number
+Descripción: Saldo actual para la vigencia del CDP asignado al proceso y al contrato
+----------------------------------------
+Campo: espostconflicto
+Nombre: EsPostConflicto
+Categoría: Ejecucion
+Tipo: text
+Descripción: Determina si el proceso está asociado a algún evento de acuerdo de paz
+----------------------------------------
+Campo: dias_adicionados
+Nombre: Dias adicionados
+Categoría: Tiempo
+Tipo: number
+Descripción: Días adicionados al contrato electrónico
+----------------------------------------
+Campo: puntos_del_acuerdo
+Nombre: Puntos del Acuerdo
+Categoría: Ejecucion
+Tipo: text
+Descripción: Pilares del acuerdo de paz, si el contrato es post conflicto
+----------------------------------------
+Campo: pilares_del_acuerdo
+Nombre: Pilares del Acuerdo
+Categoría: Ejecucion
+Tipo: text
+Descripción: Pilares del acuerdo de paz
+----------------------------------------
+Campo: urlproceso
+Nombre: URLProceso
+Categoría: Identificacion
+Tipo: url
+Descripción: URL del proceso de compra en la plataforma SECOP II
+----------------------------------------
+Campo: nombre_representante_legal
+Nombre: Nombre Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Nombre del representante legal de la entidad
+----------------------------------------
+Campo: nacionalidad_representante_legal
+Nombre: Nacionalidad Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Nacionalidad del representante legal de la entidad
+----------------------------------------
+Campo: domicilio_representante_legal
+Nombre: Domicilio Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Dirección de domicilio del representante legal de la entidad
+----------------------------------------
+Campo: tipo_de_identificaci_n_representante_legal
+Nombre: Tipo de Identificación Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Tipo de identificación del representante legal de la entidad
+----------------------------------------
+Campo: identificaci_n_representante_legal
+Nombre: Identificación Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Numero de identificación del representante legal de la entidad
+----------------------------------------
+Campo: g_nero_representante_legal
+Nombre: Género Representante Legal
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Género sexual del representante legal de la entidad
+----------------------------------------
+Campo: presupuesto_general_de_la_nacion_pgn
+Nombre: Presupuesto General de la Nacion – PGN
+Categoría: Presupuesto
+Tipo: number
+Descripción: Valor de origen de los recursos que corresponde al Presupuesto General de la Nacion – PGN
+----------------------------------------
+Campo: sistema_general_de_participaciones
+Nombre: Sistema General de Participaciones
+Categoría: Presupuesto
+Tipo: number
+Descripción: Valor de origen de los recursos que corresponde al Sistema General de Participaciones
+----------------------------------------
+Campo: sistema_general_de_regal_as
+Nombre: Sistema General de Regalías
+Categoría: Presupuesto
+Tipo: number
+Descripción: Valor de origen de los recursos que corresponde al Sistema General de Regalías
+----------------------------------------
+Campo: recursos_propios_alcald_as_gobernaciones_y_resguardos_ind_genas_
+Nombre: Recursos Propios (Alcaldías y Gobernaciones)
+Categoría: Presupuesto
+Tipo: number
+Descripción: Indica el valor de recursos de la entidad en el contrato electronico
+----------------------------------------
+Campo: recursos_de_credito
+Nombre: Recursos de Credito
+Categoría: Presupuesto
+Tipo: number
+Descripción: Valor de origen de los recursos que corresponde a Recursos de Credito
+----------------------------------------
+Campo: recursos_propios
+Nombre: Otros Recursos (Especie, Privados, Cooperación, Propios Entidades Autónomas)
+Categoría: Presupuesto
+Tipo: number
+Descripción: Valor de origen de los recursos que corresponde a Recursos Propios
+----------------------------------------
+Campo: ultima_actualizacion
+Nombre: Ultima Actualizacion
+Categoría: Otras
+Tipo: calendar_date
+Descripción: Fecha de última actualización del contrato electronico
+----------------------------------------
+Campo: codigo_entidad
+Nombre: Codigo Entidad
+Categoría: Entidad
+Tipo: number
+Descripción: Codigo de la entidad en la plataforma SECOPII
+----------------------------------------
+Campo: codigo_proveedor
+Nombre: Codigo Proveedor
+Categoría: Contratista
+Tipo: text
+Descripción: Codigo del proveedor edn la plataforma SECOPII
+----------------------------------------
+Campo: fecha_inicio_liquidacion
+Nombre: Fecha Inicio Liquidacion
+Categoría: Otras
+Tipo: calendar_date
+Descripción: Fecha de inicio de liquidación del contrato electrónico
+----------------------------------------
+Campo: fecha_fin_liquidacion
+Nombre: Fecha Fin Liquidacion
+Categoría: Otras
+Tipo: calendar_date
+Descripción: Fecha de fin de liquidación del contrato electrónico
+----------------------------------------
+Campo: objeto_del_contrato
+Nombre: Objeto del Contrato
+Categoría: Texto
+Tipo: text
+Descripción: Objeto del contrato electrónico
+----------------------------------------
+Campo: duraci_n_del_contrato
+Nombre: Duración del contrato
+Categoría: Tiempo
+Tipo: text
+Descripción: Describe la duración del contrato en el tiempo
+----------------------------------------
+Campo: nombre_del_banco
+Nombre: Nombre del banco
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el nombre del banco en donde se consignaran los pagos del contrato
+----------------------------------------
+Campo: tipo_de_cuenta
+Nombre: Tipo de cuenta
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Tipo de cuenta en la que se se consignaran los pago del contrato
+----------------------------------------
+Campo: n_mero_de_cuenta
+Nombre: Número de cuenta
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Numero de cuenta en donde se haran los pagos del contrato
+----------------------------------------
+Campo: el_contrato_puede_ser_prorrogado
+Nombre: El contrato puede ser prorrogado
+Categoría: Contratacion
+Tipo: text
+Descripción: Indica si el contrato puede ser o no prorrogado
+----------------------------------------
+Campo: fecha_de_notificaci_n_de_prorrogaci_n
+Nombre: Fecha de notificación de prorrogación
+Categoría: Otras
+Tipo: calendar_date
+Descripción: Infica la fecha de notificación de la prorrogación del contrato
+----------------------------------------
+Campo: nombre_ordenador_del_gasto
+Nombre: Nombre ordenador del gasto
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Describe el nombre del ordenador del gasto de la entidad compradora
+----------------------------------------
+Campo: tipo_de_documento_ordenador_del_gasto
+Nombre: Tipo de documento Ordenador del gasto
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el tipo de documento del ordenador del gasto de la entidad compradora
+----------------------------------------
+Campo: n_mero_de_documento_ordenador_del_gasto
+Nombre: Número de documento Ordenador del gasto
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el número de documento del ordenador del gasto
+----------------------------------------
+Campo: nombre_supervisor
+Nombre: Nombre supervisor
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Describe el nombre del supervisor de la entidad compradora
+----------------------------------------
+Campo: tipo_de_documento_supervisor
+Nombre: Tipo de documento supervisor
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el tipo de documento del supervisor de la entidad compradora
+----------------------------------------
+Campo: n_mero_de_documento_supervisor
+Nombre: Número de documento supervisor
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el número de documento del supervisor
+----------------------------------------
+Campo: nombre_ordenador_de_pago
+Nombre: Nombre Ordenador de Pago
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Describe el nombre del Ordenador de Pago de la entidad compradora
+----------------------------------------
+Campo: tipo_de_documento_ordenador_de_pago
+Nombre: Tipo de documento Ordenador de Pago
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el tipo de documento del Ordenador de Pago de la entidad compradora
+----------------------------------------
+Campo: n_mero_de_documento_ordenador_de_pago
+Nombre: Número de documento Ordenador de Pago
+Categoría: Variables_Administrativas
+Tipo: text
+Descripción: Indica el número de documento del Ordenador de Pago
+----------------------------------------
+Campo: documentos_tipo
+Nombre: Documentos Tipo
+Categoría: Contratacion
+Tipo: text
+Descripción: Indica si se utilizaron documentos tipo en el contrato
+----------------------------------------
+Campo: descripcion_documentos_tipo
+Nombre: Descripcion Documentos Tipo
+Categoría: Contratacion
+Tipo: text
+Descripción: Descripción de los documentos tipo utilizados
+----------------------------------------
+Campo: direcci_n_de_ejecuci_n_del_contrato
+Nombre: Dirección de ejecución del contrato
+Categoría: Geografia
+Tipo: text
+Descripción: Dirección en donde se ejecuto el contrato durante su vigencia
+----------------------------------------

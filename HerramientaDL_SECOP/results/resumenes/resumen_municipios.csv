@@ -1,0 +1,101 @@
+departamento,municipio,cantidad_contratos,valor_total
+Distrito Capital de Bogotá,Bogotá,105,11652197901.04
+Distrito Capital de Bogotá,No Definido,73,9277189752.05
+Valle del Cauca,Cali,31,1754630512.0
+Antioquia,Medellín,13,366683932.0
+Santander,Bucaramanga,11,326130436.99
+Tolima,Ibagué,10,270955312.0
+Atlántico,Barranquilla,10,228733992.33
+Boyacá,Tunja,8,173615680.66
+Cauca,Popayán,8,121226306.0
+Bolívar,Turbaco,7,144320000.0
+Norte de Santander,Cúcuta,7,194335000.0
+Tolima,No Definido,7,102879599.67
+Magdalena,Santa Marta,7,91977087.0
+Meta,Villavicencio,6,134325016.33
+Quindío,Armenia,6,95766608.0
+Caldas,Manizales,6,313397305.0
+Valle del Cauca,No Definido,5,50562091.0
+Huila,Neiva,5,80610544.0
+No Definido,No Definido,5,312054600.0
+"San Andrés, Providencia y Santa Catalina",San Andrés,5,174662135.0
+Bolívar,Cartagena,5,177517200.0
+Nariño,Pasto,4,30084380.0
+Caldas,No Definido,4,1055257109.0
+Risaralda,Pereira,4,105812125.0
+Putumayo,Mocoa,4,64142652.33
+Sucre,Sincelejo,4,1116620727.0
+Cundinamarca,Zipaquirá,4,166932709.5
+Casanare,Yopal,4,37300000.0
+Antioquia,Sabaneta,3,37587066.0
+Cundinamarca,Cota,3,124400000.0
+Valle del Cauca,Palmira,3,56200000.0
+Antioquia,El Bagre,3,2833312507.0
+Antioquia,El Santuario,3,161075000.0
+Santander,No Definido,3,75243333.0
+Antioquia,No Definido,3,51978101.0
+Boyacá,Sogamoso,3,81811517.0
+Córdoba,Montería,2,16408135.0
+Cesar,No Definido,2,65646077.0
+Quindío,Montenegro,2,20200000.0
+Atlántico,No Definido,2,24893200.0
+Córdoba,No Definido,2,45829771.04
+Santander,Piedecuesta,2,14260000.0
+Quindío,Calarca,2,31596782.0
+Caquetá,No Definido,2,66280000.0
+Cundinamarca,Girardot,2,36824000.0
+Amazonas,Leticia,2,37883333.0
+Cundinamarca,Funza,2,38901760.0
+Cundinamarca,Fusagasugá,2,59768574.0
+Antioquia,Bello,2,33750000.0
+Valle del Cauca,Candelaria,2,27230000.0
+Arauca,Arauca,2,27666666.67
+Cesar,Astrea,1,19200000.0
+Tolima,Valle De San Juan,1,53950000.0
+Cundinamarca,Facatativá,1,8000000.0
+Huila,No Definido,1,40800000.0
+Huila,Isnos,1,14000000.0
+Cundinamarca,Cogua,1,90000000.0
+Caldas,Pensilvania,1,2522450.0
+Antioquia,Guarne,1,9690000.0
+Nariño,Puerres,1,1850000.0
+Cesar,Gamarra,1,17500000.0
+Atlántico,Soledad,1,97000000.0
+Atlántico,Luruaco,1,2383333.0
+Boyacá,Tuta,1,1240000.0
+Bolívar,Magangué,1,3650000.0
+Cundinamarca,La Calera,1,10867500.0
+Casanare,Aguazul,1,12683077.0
+Valle del Cauca,La Cumbre,1,21600000.0
+Huila,Gigante,1,19200000.0
+Antioquia,Titiribí,1,36048195.0
+Nariño,Ipiales,1,10090500.0
+Antioquia,Urrao,1,6412051.0
+La Guajira,Uribia,1,23853636.0
+Tolima,Mariquita,1,5760000.0
+Norte de Santander,No Definido,1,51686435.5
+Vichada,Puerto Carreño,1,4200000.0
+Antioquia,Jardín,1,4950000.0
+Magdalena,Zona Bananera,1,6000000.0
+Antioquia,Caracolí,1,268336842.0
+Cauca,Patía,1,6400000.0
+Antioquia,Rionegro,1,5000000.0
+Huila,Acevedo,1,26400000.0
+Norte de Santander,Los Patios,1,12800000.0
+Meta,No Definido,1,16833333.0
+Tolima,Ortega,1,21000000.0
+Norte de Santander,Ocaña,1,80457783.33
+Cundinamarca,Ricaurte,1,53666667.0
+Cundinamarca,Cajicá,1,0.0
+Antioquia,Betania,1,20580000.0
+Cundinamarca,Tocancipá,1,16545776.0
+Bolívar,No Definido,1,16000000.0
+Valle del Cauca,Roldanillo,1,7800000.0
+Atlántico,Puerto Colombia,1,5700000.0
+Valle del Cauca,Guacarí,1,4500000.0
+Quindío,Quimbaya,1,3250000.0
+Santander,San Gil,1,6695986.0
+Nariño,No Definido,1,9616000.0
+Santander,Girón,1,10800000.0
+Cundinamarca,Puerto Salgar,1,12000000.0
+Nariño,Tumaco,1,17445390.0

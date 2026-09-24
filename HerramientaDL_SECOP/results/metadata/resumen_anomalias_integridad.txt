@@ -1,0 +1,4 @@
+contratos_valor_cero: 6
+contratos_valor_negativo: 0
+fechas_inconsistentes_fin_menor_inicio: 1
+contratos_duplicados_por_id: 0

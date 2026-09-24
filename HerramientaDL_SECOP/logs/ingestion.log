@@ -1,0 +1,26 @@
+2026-09-20 08:20:51,356 [INFO] ingestion.pipeline: Inicio dataset=contratos id=jbjy-vk9h watermark=None last_pk=None since=2026-09-01T00:00:00.000
+2026-09-20 08:20:51,356 [INFO] ingestion.soda: SODA GET jbjy-vk9h offset=0 limit=25 where=fecha_de_firma IS NOT NULL AND (fecha_de_firma >= '2026-09-01T00:00:00.000')
+2026-09-20 08:20:52,554 [INFO] ingestion.repository: Upsert 25 filas en contratos_electronicos
+2026-09-20 08:20:52,566 [INFO] ingestion.pipeline: Fin dataset=contratos fetched=25 written=25 failed=0 status=ok error=None
+2026-09-20 08:20:52,571 [INFO] ingestion.pipeline: Inicio dataset=procesos id=p6dx-8zbt watermark=None last_pk=None since=2026-09-01T00:00:00.000
+2026-09-20 08:20:52,572 [INFO] ingestion.soda: SODA GET p6dx-8zbt offset=0 limit=25 where=fecha_de_publicacion_del IS NOT NULL AND (fecha_de_publicacion_del >= '2026-09-01T00:00:00.000')
+2026-09-20 08:20:53,022 [INFO] ingestion.repository: Upsert 25 filas en procesos_contratacion
+2026-09-20 08:20:53,038 [INFO] ingestion.pipeline: Fin dataset=procesos fetched=25 written=25 failed=0 status=ok error=None
+2026-09-20 08:20:53,038 [INFO] ingestion.pipeline: ================================================================
+2026-09-20 08:20:53,039 [INFO] ingestion.pipeline: RESUMEN DE INGESTA started=2026-09-20T13:20:51.345809 finished=2026-09-20T13:20:53.038835
+2026-09-20 08:20:53,039 [INFO] ingestion.pipeline: dataset=contratos fetched=25 written=25 failed=0 status=ok error=None batches_fallidos=[]
+2026-09-20 08:20:53,039 [INFO] ingestion.pipeline: dataset=procesos fetched=25 written=25 failed=0 status=ok error=None batches_fallidos=[]
+2026-09-20 08:20:53,039 [INFO] ingestion.pipeline: ================================================================
+2026-09-20 08:21:01,938 [INFO] ingestion.pipeline: Inicio dataset=contratos id=jbjy-vk9h watermark=2026-09-01T00:00:00.000 last_pk=CO1.PCCNTR.9788699 since=None
+2026-09-20 08:21:01,939 [INFO] ingestion.soda: SODA GET jbjy-vk9h offset=0 limit=25 where=fecha_de_firma IS NOT NULL AND ((fecha_de_firma > '2026-09-01T00:00:00.000') OR (fecha_de_firma = '2026-09-01T00:00:00.000' AND id_contrato > 'CO1.PCCNTR.9788699'))
+2026-09-20 08:21:21,049 [INFO] ingestion.repository: Upsert 25 filas en contratos_electronicos
+2026-09-20 08:21:21,070 [INFO] ingestion.pipeline: Fin dataset=contratos fetched=25 written=25 failed=0 status=ok error=None
+2026-09-20 08:21:21,080 [INFO] ingestion.pipeline: Inicio dataset=procesos id=p6dx-8zbt watermark=2026-09-01T00:00:00.000 last_pk=CO1.REQ.10735973 since=None
+2026-09-20 08:21:21,080 [INFO] ingestion.soda: SODA GET p6dx-8zbt offset=0 limit=25 where=fecha_de_publicacion_del IS NOT NULL AND ((fecha_de_publicacion_del > '2026-09-01T00:00:00.000') OR (fecha_de_publicacion_del = '2026-09-01T00:00:00.000' AND id_del_proceso > 'CO1.REQ.10735973'))
+2026-09-20 08:21:46,566 [INFO] ingestion.repository: Upsert 25 filas en procesos_contratacion
+2026-09-20 08:21:46,583 [INFO] ingestion.pipeline: Fin dataset=procesos fetched=25 written=25 failed=0 status=ok error=None
+2026-09-20 08:21:46,584 [INFO] ingestion.pipeline: ================================================================
+2026-09-20 08:21:46,584 [INFO] ingestion.pipeline: RESUMEN DE INGESTA started=2026-09-20T13:21:01.914958 finished=2026-09-20T13:21:46.584265
+2026-09-20 08:21:46,584 [INFO] ingestion.pipeline: dataset=contratos fetched=25 written=25 failed=0 status=ok error=None batches_fallidos=[]
+2026-09-20 08:21:46,585 [INFO] ingestion.pipeline: dataset=procesos fetched=25 written=25 failed=0 status=ok error=None batches_fallidos=[]
+2026-09-20 08:21:46,585 [INFO] ingestion.pipeline: ================================================================

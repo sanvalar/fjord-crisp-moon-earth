@@ -1,0 +1,7 @@
+rango_valor,cantidad_contratos,valor_acumulado
+10M a 50M COP,283,6670170844.33
+Menor a 10M COP,124,718202231.12
+50M a 200M COP,69,5751293189.81
+200M a 1.000M COP,9,4508084910.66
+1.000M a 5.000M COP,9,19891357851.0
+0 o Menor (Inconsistente),6,0.0
